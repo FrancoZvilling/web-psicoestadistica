@@ -1,0 +1,292 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* --- ESTILOS DE LA CABECERA --- */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.logo-container { /* No se necesita mucho aquí */ }
+
+#logoFacultad {
+    height: 150px; /* Tamaño que especificaste */
+    width: auto;
+    display: block;
+}
+
+#logoUNC {
+    height: 90px;  /* Tamaño que especificaste */
+    width: auto;
+    display: block;
+}
+
+/* --- INFORMACIÓN GENERAL DEL TRABAJO --- */
+.info-catedra {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.info-catedra p {
+    font-family: Arial;
+    font-size: 14pt;
+    margin: 5px 0;
+}
+
+.titulo-principal h1 {
+    font-family: Arial;
+    font-size: 14pt;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 40px;
+    line-height: 1.4;
+}
+
+.info-grupo { margin-bottom: 20px; }
+.info-grupo .grupo-nombre {
+    font-family: Arial;
+    font-size: 14pt;
+}
+
+.integrantes { margin-bottom: 30px; }
+.integrantes h2 {
+    font-family: Arial;
+    font-size: 14pt;
+    margin-bottom: 10px;
+}
+.integrantes ul {
+    list-style: none;
+    padding-left: 0;
+}
+.integrantes ul li {
+    font-family: Arial;
+    font-size: 14pt;
+    margin-bottom: 5px;
+    padding-left: 20px;
+    position: relative;
+}
+.integrantes ul li::before {
+    content: "- ";
+    position: absolute;
+    left: 0;
+}
+
+.info-docente { margin-bottom: 30px; }
+.info-docente p {
+    font-family: Arial;
+    font-size: 14pt;
+    margin: 5px 0;
+}
+
+/* --- CONTENIDO DEL DOCUMENTO (INTRO, METODOLOGÍA) --- */
+.contenido-documento {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.seccion-texto { margin-bottom: 25px; }
+.titulo-seccion {
+    font-family: Arial;
+    font-size: 12pt;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+.seccion-texto p {
+    font-family: Arial;
+    font-size: 12pt;
+    line-height: 1.5;
+    text-align: justify;
+    margin-bottom: 0;
+}
+
+/* --- ESTILOS PARA LA SECCIÓN DE RESULTADOS GRÁFICOS --- */
+.seccion-resultados-graficos {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.seccion-resultados-graficos .titulo-seccion-principal {
+    font-family: Arial;
+    font-size: 14pt;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.item-visual-explicacion {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-bottom: 40px;
+    align-items: flex-start;
+}
+
+.visual-wrapper {
+    flex: 1 1 50%;
+    min-width: 300px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.visual-wrapper h2 {
+    font-family: Arial;
+    text-align: center;
+    color: #555;
+    font-size: 1em; /* Hereda de su contexto, será 12pt si el padre es 12pt */
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.explicacion-wrapper {
+    flex: 1 1 45%;
+    min-width: 280px;
+    padding-top: 5px; /* Pequeño ajuste visual */
+}
+
+.explicacion-wrapper h3 {
+    font-family: Arial;
+    font-size: 12pt;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: #444;
+}
+
+.explicacion-wrapper p {
+    font-family: Arial;
+    font-size: 12pt; /* Arial 12 para las explicaciones */
+    line-height: 1.6;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.visual-wrapper canvas {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100%;
+}
+
+.visual-wrapper.table-wrapper-custom table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 5px;
+    font-size: 0.9em; /* Relativo al tamaño de fuente del wrapper */
+}
+
+.visual-wrapper.table-wrapper-custom table th,
+.visual-wrapper.table-wrapper-custom table td {
+    font-family: Arial;
+    border: 1px solid #ddd;
+    padding: 7px 9px;
+    text-align: left;
+}
+
+.visual-wrapper.table-wrapper-custom table th {
+    background-color: #f9f9f9;
+    font-weight: bold;
+}
+
+.visual-wrapper.table-wrapper-custom table td:nth-child(2),
+.visual-wrapper.table-wrapper-custom table td:nth-child(3) {
+    text-align: right;
+}
+
+/* --- PIE DE PÁGINA --- */
+footer {
+    text-align: center;
+    font-family: Arial;
+    font-size: 14pt;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+    margin-top: 40px;
+}
+
+/* --- ESTILOS PARA LA SECCIÓN DE BIBLIOGRAFÍA --- */
+.seccion-bibliografia {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eee; /* Coherente con otras secciones */
+}
+
+/* El título .titulo-seccion-principal ya está definido y se reutiliza */
+
+.lista-bibliografia {
+    font-family: Arial;
+    font-size: 12pt; /* Texto de la bibliografía en Arial 12pt */
+    list-style: none; /* Quitamos los bullets por defecto, si prefieres bullets, comenta esta línea */
+    padding-left: 0;  /* Quitamos el padding por defecto del ul */
+    line-height: 1.6; /* Buen interlineado para legibilidad */
+}
+
+.lista-bibliografia li {
+    margin-bottom: 10px; /* Espacio entre cada entrada bibliográfica */
+    text-align: justify; /* Justificar el texto de cada entrada */
+}
+
+.lista-bibliografia li em { /* Estilo para los elementos en cursiva (ej: nombre de la revista) */
+    font-style: italic;
+}
+
+
+/* --- MEDIA QUERIES PARA RESPONSIVE DESIGN --- */
+@media (max-width: 768px) { /* Ajuste para tablets y móviles */
+    .item-visual-explicacion {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .visual-wrapper,
+    .explicacion-wrapper {
+        flex-basis: auto;
+        width: 100%;
+        min-width: unset;
+    }
+    .visual-wrapper {
+        margin-bottom: 20px; /* Espacio cuando visual está encima de explicación */
+    }
+}
+
+@media (max-width: 600px) { /* Ajustes adicionales para móviles más pequeños */
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    #logoFacultad, #logoUNC {
+        margin-bottom: 0;
+    }
+}

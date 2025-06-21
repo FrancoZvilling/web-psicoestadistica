@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psicoestadística - Trabajo Práctico</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <img src="logo-facultad.png" alt="Logo Facultad de Psicología" id="logoFacultad"> <!-- REEMPLAZA CON TU LOGO -->
+            </div>
+            <div class="logo-container">
+                <img src="logo-unc.png" alt="Logo UNC" id="logoUNC"> <!-- REEMPLAZA CON TU LOGO -->
+            </div>
+        </header>
+
+        <section class="info-catedra">
+            <p>Psicoestadística Descriptiva e Inferencial - Cátedra B</p>
+            <p>Primer trabajo práctico evaluativo</p>
+        </section>
+
+        <section class="titulo-principal">
+            <h1>“Frecuencia y preferencia de bebidas alcohólicas: factores de consumo de alcohol en jóvenes y su entorno como influencia”.</h1>
+        </section>
+
+        <section class="info-grupo">
+            <p class="grupo-nombre">> Grupo: Psicólogos con Excel.</p>
+        </section>
+
+        <section class="integrantes">
+            <h2>Integrantes:</h2>
+            <ul>
+                <li>Bertagnolli Pavón Verónica (37487546)</li>
+                <li>Chavez Valentino (47583104)</li>
+                <li>D'andrea Cabrera Lourdes Milagros (4665215)</li>
+                <li>Gallo Paronzini Delfina (44806197)</li>
+                <li>Lopez Candela Valentina (47303808)</li>
+                <li>Pérez Gaudio Zoe (47709592)</li>
+                <li>Sosa Vega Felipe Agustín (47240566)</li>
+                <li>Zvilling Franco Nicolás (39544243)</li>
+            </ul>
+        </section>
+
+        <section class="info-docente">
+            <p>Profesora: Florencia Caneto.</p>
+            <p>Comisión: 14 a 16 hs.</p>
+        </section>
+
+        <footer>
+            <p>Córdoba, Junio de 2025.</p>
+        </footer>
+
+        <section class="contenido-documento">
+            <article class="seccion-texto">
+                <h2 class="titulo-seccion">Introducción</h2>
+                <p>
+                    En este trabajo se analizaron variables relacionadas con el consumo de alcohol
+                    en adolescentes, consideradas como factores de riesgo: Edad: se refiere a los años
+                    cumplidos por los participantes, “la edad modula el rol de distintos factores de riesgo
+                    y de protección asociados con una mayor o menor probabilidad de uso y abuso de
+                    alcohol” (Masten et al., 2009, como se citó en Pilatti et al., 2012). Bebida alcohólica
+                    preferida: alude al tipo de bebida más elegida. Frecuencia de consumo: indica cada
+                    cuánto tiempo los adolescentes consumen alcohol. Consumo de alcohol de pares:
+                    refiere a la percepción del consumo dentro del grupo de amigos y por último
+                    consumo de alcohol parental: alude a la percepción del consumo de alcohol por
+                    parte de los padres, “la exposición a modelos de consumo de alcohol de padres y
+                    pares es una de las variables con mayor efecto sobre el uso de alcohol de los niños.
+                    Al respecto, la influencia del consumo parental parece ser más importante en las
+                    etapas iniciales del consumo, mientras que el consumo de pares parece influir en el
+                    inicio y también en la escalada del consumo” (Capaldi et al., 2009; Duncan, Duncan,
+                    & Strycker, 2006, como se citó en Pilatti et al., 2012). A partir de estas evidencias,
+                    surge el siguiente interrogante: ¿Cómo se caracterizan los patrones de consumo de
+                    alcohol (tipo de bebida y frecuencia) en adolescentes y qué percepción tienen del
+                    consumo de sus pares y padres?
+                </p>
+            </article>
+
+            <article class="seccion-texto">
+                <h2 class="titulo-seccion">Metodología</h2>
+                <p>
+                    La recolección de datos se realizó mediante un cuestionario dirigido a 204
+                    adolescentes, quienes respondieron en base a sus experiencias durante los últimos
+                    12 meses. Se registraron variables relacionadas con el consumo de alcohol. Se
+                    consultó la edad (nivel de medición proporcional, ya que tiene cero absoluto); la
+                    bebida alcohólica más consumida donde las categorías variaron entre cerveza, vino,
+                    fernet, gancia, otras, y “no tomo”, (nivel de medición nominal, ya que no hay un
+                    orden entre las opciones); la frecuencia de consumo, medida en una escala de 0 (no
+                    consumo) a 8 (4 o más veces por semana), (nivel ordinal, porque permite jerarquizar
+                    la frecuencia). Además, se les pidió estimar cuántos de sus amigos varones más
+                    cercanos consumen alcohol en una escala de 0= ninguno a 4= todos; (nivel de
+                    medición ordinal, porque las opciones tienen un orden) y si su padre o figura paterna
+                    <!-- Completa el texto si es necesario -->
+                </p>
+            </article>
+        </section>
+
+        <!-- INICIO SECCIÓN DE GRÁFICOS Y TABLAS -->
+        <section class="seccion-resultados-graficos">
+            <h2 class="titulo-seccion-principal">Resultados y Análisis Gráfico</h2>
+
+            <!-- Item 1: Gráfico Edades + Explicación -->
+            <div class="item-visual-explicacion">
+                <div class="visual-wrapper">
+                    <h2>Edades</h2>
+                    <canvas id="chartEdades"></canvas>
+                </div>
+                <div class="explicacion-wrapper">
+                    <h3>Análisis del Gráfico de Edades</h3>
+                    <p>
+                        La muestra se compone con 115 adolescentes de 13 años, 67 de 14 años y 22 de 15 años, siendo la media de edad 13,54 años. El gráfico “edades” permite visualizar y comparar las variables haciendo más visible un promedio bajo.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Item 2: Gráfico Tipo de bebidas + Explicación -->
+            <div class="item-visual-explicacion">
+                <div class="visual-wrapper">
+                    <h2>Tipo de bebidas</h2>
+                    <canvas id="chartTipoBebidas"></canvas>
+                </div>
+                <div class="explicacion-wrapper">
+                    <h3>Análisis del Gráfico de Tipos de Bebida</h3>
+                    <p>
+                        El gráfico “tipo de bebidas” permite comparar visualmente las proporciones de las distintas categorías, el sector más amplio corresponde al fernet (cat. “4”), con 53 casos, posicionándolo como la bebida más consumida dentro de los participantes que toman alcohol.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Item 3: Tabla Frecuencia de consumo + Explicación -->
+            <div class="item-visual-explicacion">
+                <div class="visual-wrapper table-wrapper-custom">
+                    <h2>Frecuencia de consumo</h2>
+                    <table id="tableFrecuenciaConsumo">
+                        <thead>
+                            <tr><th>Categoría</th><th>f</th><th>f'</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>0= no toma</td><td>69</td><td>69</td></tr>
+                            <tr><td>1= 1 vez al año</td><td>17</td><td>86</td></tr>
+                            <tr><td>2= 2 a 4 veces al año</td><td>38</td><td>124</td></tr>
+                            <tr><td>3= 5 a 10 veces al año</td><td>26</td><td>150</td></tr>
+                            <tr><td>4= 1 vez por mes</td><td>16</td><td>166</td></tr>
+                            <tr><td>5= 2 a 3 veces por mes</td><td>19</td><td>185</td></tr>
+                            <tr><td>6= 1 vez por semana</td><td>8</td><td>193</td></tr>
+                            <tr><td>7= 2 o 3 veces por semana</td><td>9</td><td>202</td></tr>
+                            <tr><td>8= 4 o más veces por semana</td><td>2</td><td>204</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="explicacion-wrapper">
+                    <h3>Análisis de la Tabla de Frecuencia de Consumo</h3>
+                    <p>
+                        La tabla “frecuencia de consumo”, nos permite resumir cuántos casos caen en cada categoría; pudiendo calcular que la mitad de los encuestados queda en la franja “2-4 veces al año”, lo que indica un nivel de consumo bajo.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Item 4: Tabla Amigos varones que toman + Explicación -->
+            <div class="item-visual-explicacion">
+                <div class="visual-wrapper table-wrapper-custom">
+                    <h2>Amigos varones que toman</h2>
+                    <table id="tableAmigos">
+                        <thead>
+                            <tr><th>Categoría</th><th>f</th><th>f'</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>0= ninguno</td><td>58</td><td>58</td></tr>
+                            <tr><td>1= pocos</td><td>63</td><td>121</td></tr>
+                            <tr><td>2= varios</td><td>41</td><td>162</td></tr>
+                            <tr><td>3= muchos</td><td>31</td><td>193</td></tr>
+                            <tr><td>4= todos</td><td>11</td><td>204</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="explicacion-wrapper">
+                    <h3>Análisis de la Tabla de Percepción de Consumo en Amigos</h3>
+                    <p>
+                        La tabla “amigos varones que toman” expone la distribución de casos por categoría, pudiendo calcular que más del 50 % percibe un consumo bajo entre sus pares (cat. “1= pocos”).
+                    </p>
+                </div>
+            </div>
+
+            <!-- Item 5: Gráfico Consumo parental + Explicación -->
+            <div class="item-visual-explicacion">
+                <div class="visual-wrapper">
+                    <h2>Consumo parental</h2>
+                    <canvas id="chartConsumoParental"></canvas>
+                </div>
+                <div class="explicacion-wrapper">
+                    <h3>Análisis del Gráfico de Consumo Parental</h3>
+                    <p>
+                        El gráfico “consumo parental” facilita ver de un vistazo el peso relativo de cada categoría. Reflejando que la categoría 1= Sí, con un total de 186 casos, es la opción más seleccionada. Esto muestra que en su mayoría los padres de los encuestados sí consumen bebidas alcohólicas.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+        <!-- FIN SECCIÓN DE GRÁFICOS Y TABLAS -->
+
+        <!-- INICIO SECCIÓN DE BIBLIOGRAFÍA -->
+        <section class="seccion-bibliografia">
+            <h2 class="titulo-seccion-principal">BIBLIOGRAFÍA:</h2>
+            <ul class="lista-bibliografia">
+                <li>
+                    Pilatti, A., Godoy, JC y Brussino, SA (2012). ANÁLISIS DE FACTORES QUE INFLUYEN SOBRE EL USO DE ALCOHOL DE NIÑOS: UN CAMINO DE ANÁLISIS PROSPECTIVO. <em>Salud y drogas</em>, <em>12</em>(2), 155-192.
+                </li>
+                <!-- Aquí puedes añadir más ítems <li> si tienes más referencias -->
+            </ul>
+        </section>
+        <!-- FIN SECCIÓN DE BIBLIOGRAFÍA -->
+
+        
+    </div> <!-- Cierre del .container principal -->
+
+    <script>
+        // --- INICIO CÓDIGO JAVASCRIPT PARA GRÁFICOS ---
+        document.addEventListener('DOMContentLoaded', function () {
+
+            const defaultFontFamily = 'Arial'; // Variable para la fuente por defecto
+
+            // --- Opciones comunes para gráficos ---
+            const commonBarOptions = (indexAxis = 'x', aspectRatio = 1.5, legendDisplay = true, yTitle = '', xTitle = '') => ({
+                indexAxis: indexAxis,
+                responsive: true,
+                maintainAspectRatio: true,
+                aspectRatio: aspectRatio,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: { display: !!yTitle, text: yTitle, font: { size: 10, family: defaultFontFamily } },
+                        ticks: { font: { size: 9, family: defaultFontFamily } }
+                    },
+                    x: {
+                        title: { display: !!xTitle, text: xTitle, font: { size: 10, family: defaultFontFamily } },
+                        ticks: { font: { size: 9, family: defaultFontFamily } }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: legendDisplay,
+                        position: 'top',
+                        labels: { boxWidth: 12, font: { size: 10, family: defaultFontFamily }, padding: 8 }
+                    },
+                    title: { display: false },
+                    tooltip: {
+                        bodyFont: { family: defaultFontFamily },
+                        titleFont: { family: defaultFontFamily }
+                    }
+                }
+            });
+
+            const commonPieOptions = (aspectRatio = 1.2, legendPosition = 'bottom') => ({
+                responsive: true,
+                maintainAspectRatio: true,
+                aspectRatio: aspectRatio,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: legendPosition,
+                        labels: { boxWidth: 12, font: { size: 10, family: defaultFontFamily }, padding: 10, usePointStyle: true }
+                    },
+                    title: { display: false },
+                    tooltip: {
+                        bodyFont: { family: defaultFontFamily },
+                        titleFont: { family: defaultFontFamily },
+                        callbacks: {
+                            label: function(context) {
+                                let label = context.label || '';
+                                if (label) { label += ': '; }
+                                if (context.parsed !== null) {
+                                    const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                    const percentage = total > 0 ? ((context.parsed / total) * 100).toFixed(1) + '%' : '0%';
+                                    label += context.formattedValue + ' (' + percentage + ')';
+                                }
+                                return label;
+                            }
+                        }
+                    }
+                }
+            });
+
+            // --- GRÁFICO 1: Edades (Vertical Bar) ---
+            const dataEdades = {
+                labels: ['13', '14', '15'],
+                datasets: [{
+                    label: 'Cantidad',
+                    data: [115, 67, 22],
+                    backgroundColor: ['rgba(199, 182, 224, 0.7)', 'rgba(144, 238, 144, 0.7)', 'rgba(70, 130, 180, 0.7)'],
+                    borderColor: ['rgba(199, 182, 224, 1)', 'rgba(144, 238, 144, 1)', 'rgba(70, 130, 180, 1)'],
+                    borderWidth: 1
+                }]
+            };
+            const configEdades = {
+                type: 'bar',
+                data: dataEdades,
+                options: {
+                    ...commonBarOptions('x', 1.3, true, 'Cantidad', 'EDADES'),
+                    plugins: { // Asegurar que plugins se fusionen correctamente
+                        legend: {
+                            display: true, position: 'top',
+                            labels: {
+                                boxWidth: 12, font: { size: 10, family: defaultFontFamily }, padding: 8,
+                                generateLabels: function(chart) {
+                                    const data = chart.data;
+                                    if (data.labels.length && data.datasets.length) {
+                                        return data.labels.map(function(label, i) {
+                                            const meta = chart.getDatasetMeta(0);
+                                            const style = meta.controller.getStyle(i);
+                                            return { text: label, fillStyle: style.backgroundColor, strokeStyle: style.borderColor, lineWidth: style.borderWidth, hidden: isNaN(data.datasets[0].data[i]) || meta.data[i].hidden, index: i };
+                                        });
+                                    } return [];
+                                }
+                            }
+                        },
+                        tooltip: { // Asegurar tooltip con fuente Arial
+                            bodyFont: { family: defaultFontFamily },
+                            titleFont: { family: defaultFontFamily }
+                        },
+                        title: { display: false } // Mantener el H2 del HTML
+                    }
+                }
+            };
+            new Chart(document.getElementById('chartEdades'), configEdades);
+
+            // --- GRÁFICO 2: Tipo de bebidas (Pie) ---
+            const sortedLabelsBebidas = ['0 = No toma (71)', '1 = Cerveza (8)', '2 = Vino (36)', '3 = Gancia (11)','4 = Fernet (53)', '5 = Ron (4)', '6 = Vodka/Tequila (12)', '7 = Sidra (8)',  '8 = Otra (1)'];
+            const sortedDataBebidas = [71, 8, 36, 11, 53, 4, 12, 8, 1];
+            const sortedColorsBebidas = ['rgba(200, 200, 200, 0.8)', 'rgba(135, 206, 250, 0.8)', 'rgba(220, 20, 60, 0.8)', 'rgba(0, 255, 255, 0.8)', 'rgba(124, 252, 0, 0.8)', 'rgba(255, 223, 0, 0.8)', 'rgba(255, 192, 203, 0.8)', 'rgba(244, 164, 96, 0.8)', 'rgba(169, 169, 169, 0.8)'];
+            const dataTipoBebidasReordered = {
+                labels: sortedLabelsBebidas,
+                datasets: [{ data: sortedDataBebidas, backgroundColor: sortedColorsBebidas, borderColor: '#fff', borderWidth: 1.5, hoverOffset: 8 }]
+            };
+            new Chart(document.getElementById('chartTipoBebidas'), {
+                type: 'pie',
+                data: dataTipoBebidasReordered,
+                options: commonPieOptions(1.1, 'bottom')
+            });
+
+            // --- GRÁFICO 3: Consumo parental (Horizontal Bar) ---
+            const dataConsumoParental = {
+                labels: ['0=No', '1=Sí'],
+                datasets: [{
+                    label: 'Respuesta',
+                    data: [18, 186],
+                    backgroundColor: ['rgba(255, 99, 132, 0.7)', 'rgba(144, 238, 144, 0.7)'],
+                    borderColor: ['rgba(255, 99, 132, 1)', 'rgba(144, 238, 144, 1)'],
+                    borderWidth: 1
+                }]
+            };
+            const configConsumoParental = {
+                type: 'bar',
+                data: dataConsumoParental,
+                options: commonBarOptions('y', 1.6, false, '', 'Cantidad')
+            };
+            new Chart(document.getElementById('chartConsumoParental'), configConsumoParental);
+
+        });
+        // --- FIN CÓDIGO JAVASCRIPT PARA GRÁFICOS ---
+    </script>
+</body>
+</html>
